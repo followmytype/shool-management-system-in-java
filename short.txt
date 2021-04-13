@@ -1,0 +1,21 @@
+學校管理系統，管理學生、老師、金錢
+
+金錢來源：學生學費
+金錢支出：教師薪資
+
+// School 
+Teacher
+Student
+Total money
+
+// Teacher
+id
+name
+salary
+
+// Student
+id
+name
+grade
+fees total
+fees paid

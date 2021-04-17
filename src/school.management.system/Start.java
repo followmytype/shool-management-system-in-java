@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import command.operation.Command;
 
 public class Start {
     private String username;
@@ -13,7 +14,7 @@ public class Start {
     }
 
     public void welcome() {
-        clearScreen();
+        Command.clearScreen();
         System.out.print("Welcom to school management system.\n" +
                          "Please enter the account and password or enter 'exit' to exit.\n" +
                          "Accout: ");
@@ -26,7 +27,7 @@ public class Start {
 
     public void checkInput (String input) {
         if (input.equals("exit")) {
-            exit();
+            Command.exit();
         }
     }
 
@@ -37,19 +38,9 @@ public class Start {
             password = scanner.nextLine();
         }
         this.password = password;
-        clearScreen();
+        Command.clearScreen();
         System.out.println("Success Login! Welcome, " + this.getCurrentUser() + "!");
     }
-
-    public static void exit() {
-        System.out.println("Bye~");
-        System.exit(0);
-    }
-
-    public static void clearScreen() {  
-        System.out.print("\033[H\033[2J");  
-        System.out.flush();  
-    }  
 
     public String getCurrentUser() {
         return this.username;
